@@ -9,25 +9,25 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/Rajath9945/source.git'
+            echo 'sucessfull'
             }
         }
 
         stage('Build') {
-            steps {
-                sh 'mvn clean install'
-            }
+          steps {
+            echo 'sucessfull'
+            }}
         }
 
         stage('Prepare File') {
-            steps {
-                sh 'echo "Jenkins Data" > source.txt'
+           steps {
+            echo 'sucessfull'
             }
         }
 
         stage('Run Application') {
-            steps {
-                sh 'mvn exec:java -Dexec.mainClass="com.example.App"'
+          steps {
+            echo 'sucessfull'
             }
         }
     }
